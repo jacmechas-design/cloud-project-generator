@@ -170,5 +170,32 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
 }
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--muted);
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 8px;
+  }
+}
+
+@utility task-card {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 10px 25px -5px rgb(0 0 0 / 0.06),
+      0 8px 10px -6px rgb(0 0 0 / 0.02);
+  }
+}
+
